@@ -3,7 +3,7 @@
 	Plugin Name: ImmoPress
 	Plugin URI:  http://www.cccc.de/
 	Description: Erlaubt den einfachen Expose-Import von Immobilienscout24.de in WordPress.
-	Version:     0.0.1
+	Version:     0.0.2
 	Author:      4c media
 	Author URI:  http://www.cccc.de/
 	License:     GPL2
