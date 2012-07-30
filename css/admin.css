@@ -1,0 +1,100 @@
+/*--------------------------------------------------------------------------------------------
+*
+*	WP Box
+*
+*--------------------------------------------------------------------------------------------*/
+
+.wp-box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.wp-box .inner {
+    padding: 10px;
+}
+.wp-box .footer {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #E1E1E1;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+}
+.wp-box .footer ul.left {
+    float: left;
+}
+.wp-box .footer ul li {
+    margin: 0;
+    padding: 0;
+}
+.wp-box .footer ul.left li {
+    margin-right: 10px;
+}
+.wp-box .footer ul.right {
+    float: right;
+}
+.wp-box .footer ul.right li {
+    margin-left: 10px;
+}
+
+.wp-box h2 {
+	margin: .25em 0 .75em;
+	padding: 0;
+}
+
+.wp-box h3 {
+	margin: 1.5em 0 0;
+}
+
+.wp-box p {
+	margin-top: 0.5em;
+}
+
+.wp-box-half.left {
+	width: 50%;
+	float: left;
+}
+
+.wp-box-half.right {
+	width: 50%;
+	float: right;
+	background: none repeat scroll 0 0 #F9F9F9;
+    border-left: 1px solid #E1E1E1;
+    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+       -moz-box-sizing: border-box; /* FF1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+}
+
+.wp-box-half.right .inner {
+	
+}
+
+.wp-box select {
+	width: 99%;
+	height: auto !important;
+}
+
+/*--------------------------------------------------------------------------------------------
+*
+*	ImmoPress Settings
+*
+*--------------------------------------------------------------------------------------------*/
+
+#immopress_options {
+	margin-top: 20px;
+}
+#immopress_options #icon-link-manager {
+	margin-top: 0;
+}
+#immopress_options .footer h3 {
+	margin: .5em 0 1em;
+}
+.immopress_settings-logo {
+	margin-top: -3px;
+}
+#immopress_options .form-table {
+	margin-bottom: 0;
+}
+#immopress_options .immopress_explain-logo {
+	margin: 1.5em 0 .5em;
+}
