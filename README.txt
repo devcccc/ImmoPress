@@ -6,6 +6,7 @@ Requires at least: 3.2.1
 Tested up to: 3.4.1
 Stable tag: 0.0.2
 
+
 Erlaubt den einfachen Expose-Import von Immobilienscout24.de in WordPress.
 
 == Description ==
