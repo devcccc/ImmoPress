@@ -3,8 +3,8 @@ Contributors: jancbeck
 Plugin URI:: http://www.cccc.de/immopress/
 Tags: immobilienscout24.de, real-estate, import
 Requires at least: 3.2.1
-Tested up to: 3.3.1
-Stable tag: 0.0.1
+Tested up to: 3.4.1
+Stable tag: 0.0.2
 
 Erlaubt den einfachen Expose-Import von Immobilienscout24.de in WordPress.
 
@@ -31,7 +31,6 @@ Um das Plugin zu installieren gehen Sie wie folgt vor:
 
 == Changelog ==
 
-<<<<<<< HEAD
 = 0.0.2 =
 * Beschreibung erweitert
 
