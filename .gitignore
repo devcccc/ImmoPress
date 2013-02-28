@@ -23,3 +23,6 @@ mockup.xml
 
 website.md
 /src
+*.sublime-project
+
+*.sublime-workspace
