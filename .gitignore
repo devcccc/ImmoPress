@@ -26,3 +26,5 @@ website.md
 *.sublime-project
 
 *.sublime-workspace
+
+sftp-config.json
