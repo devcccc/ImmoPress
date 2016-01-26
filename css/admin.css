@@ -74,6 +74,10 @@
 	height: auto !important;
 }
 
+#menu-posts-immopress_property .dashicons-before:before {
+    content: "\f102" !important;
+}
+
 /*--------------------------------------------------------------------------------------------
 *
 *	ImmoPress Settings
