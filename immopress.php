@@ -487,7 +487,7 @@ class ImmoPress {
 		);
 		$api->setRequestUrl( 'live' );
 		
-		$api->setContentResultType( ( $settings['json'] ? 'json' : 'xml') );
+		// $api->setContentResultType( ( $settings['json'] ? 'json' : 'xml') );
 		
 		$api_db = array(
 			'mysql',
