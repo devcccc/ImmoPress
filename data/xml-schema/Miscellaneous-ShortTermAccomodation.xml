@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.invalid/tns"
+           xmlns:gis="http://example.invalid/gis"
+           xmlns:ns1="http://example.invalid/ns1">
+
+    <xs:complexType name="ShortTermAccommodation">
+
+        <xs:complexContent>
+
+            <xs:extension base="tns:RealEstate">
+
+                <xs:sequence>
+
+                    <!-- Basiselemente -->
+
+                    <xs:element minOccurs="0" name="externalId" type="xs:string"/>
+
+                    <xs:element name="title" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="creationDate" type="xs:dateTime"/>
+
+                    <xs:element minOccurs="0" name="lastModificationDate" type="xs:dateTime"/>
+
+                    <xs:element name="address" type="tns:Wgs84Address"/>
+
+                    <xs:element minOccurs="0" name="apiSearchData" type="tns:ApiSearchData"/>
+
+                    <xs:element minOccurs="0" name="groupNumber" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="descriptionNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="furnishingNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="locationNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="otherNote" type="xs:string"/>
+
+                    <xs:element default="false" name="showAddress" type="xs:boolean"/>
+
+                    <!-- Immobilientyp spezifische Elemente -->
+
+                    <xs:element minOccurs="0" name="baseRent" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="buildingEnergyRatingType" type="ns1:BuildingEnergyRatingType"/>
+
+                    <xs:element name="cellar" type="xs:boolean"/>
+
+                    <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="condition" type="ns1:RealEstateCondition"/>
+
+                    <xs:element minOccurs="0" name="deposit" type="xs:string"/>
+
+                    <xs:element name="endRentalDate" type="xs:date"/>
+
+                    <xs:element name="energyConsumptionContainsWarmWater" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="firingTypes" type="ns1:FiringTypes"/>
+
+                    <xs:element minOccurs="0" name="floor" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="gender" type="ns1:FlatMateGenderType"/>
+
+                    <xs:element name="guestToilet" type="xs:boolean"/>
+
+                    <xs:element name="handicappedAccessible" type="xs:boolean"/>
+
+                    <xs:element minOccurs="0" name="hasFurniture" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="heatingType" type="ns1:HeatingType"/>
+
+                    <xs:element name="lift" type="xs:boolean"/>
+
+                    <xs:element minOccurs="0" name="maxNumberOfPersons" type="xs:int"/>
+
+                    <xs:element minOccurs="0" name="maxRentalTime" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="minRentalTime" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="numberOfFloors" type="xs:int"/>
+
+                    <xs:element minOccurs="0" name="numberOfParkingSpaces" type="xs:int"/>
+
+                    <xs:element minOccurs="0" name="parkingSpacePrice" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="parkingSpaceType" type="ns1:ParkingSpaceType"/>
+
+                    <xs:element minOccurs="0" name="petsAllowed" type="ns1:PetsAllowedType"/>
+
+                    <xs:element minOccurs="0" name="serviceCharge" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="thermalCharacteristic" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="totalRent" type="xs:double"/>
+
+                    <xs:element name="price" type="ns1:Price"/>
+
+                    <xs:element minOccurs="0" name="livingSpace" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="numberOfRooms" type="xs:double"/>
+
+                    <xs:element name="startRentalDate" type="xs:date"/>
+
+                    <xs:element name="balcony" type="xs:boolean"/>
+
+                    <xs:element name="garden" type="xs:boolean"/>
+
+                    <xs:element name="nonSmoker" type="xs:boolean"/>
+
+                    <xs:element name="shortTermAccomodationType" type="ns1:ShortTermAccommodationType"/>
+
+                    <xs:element name="courtage" type="ns1:CourtageInfo"/>
+
+                </xs:sequence>
+
+            </xs:extension>
+
+        </xs:complexContent>
+
+    </xs:complexType>
+
+</xs:schema>

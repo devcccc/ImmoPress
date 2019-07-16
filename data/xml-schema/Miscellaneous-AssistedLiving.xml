@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.invalid/tns"
+           xmlns:gis="http://example.invalid/gis"
+           xmlns:ns1="http://example.invalid/ns1">
+
+    <xs:complexType name="AssistedLiving">
+
+        <xs:complexContent>
+
+            <xs:extension base="tns:RealEstate">
+
+                <xs:sequence>
+
+                    <!-- Basiselemente -->
+
+                    <xs:element minOccurs="0" name="externalId" type="xs:string"/>
+
+                    <xs:element name="title" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="creationDate" type="xs:dateTime"/>
+
+                    <xs:element minOccurs="0" name="lastModificationDate" type="xs:dateTime"/>
+
+                    <xs:element name="address" type="tns:Wgs84Address"/>
+
+                    <xs:element minOccurs="0" name="apiSearchData" type="tns:ApiSearchData"/>
+
+                    <xs:element minOccurs="0" name="groupNumber" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="descriptionNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="furnishingNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="locationNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="otherNote" type="xs:string"/>
+
+                    <xs:element default="false" name="showAddress" type="xs:boolean"/>
+
+                    <!-- Immobilientyp spezifische Elemente -->
+
+                    <xs:element minOccurs="0" name="shortDescription" type="xs:string"/>
+
+                    <xs:element name="petsAllowed" type="ns1:PetsAllowedType"/>
+
+                    <xs:element name="trialLivingPossible" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element name="marketingType" type="ns1:MarketingType"/>
+
+                    <xs:element name="facilityType" type="ns1:FacilityType"/>
+
+                    <xs:element minOccurs="0" name="minBaseRent" type="ns1:Price"/>
+
+                    <xs:element minOccurs="0" name="minPurchasePrice" type="ns1:Price"/>
+
+                    <xs:element minOccurs="0" name="constructionYear" type="xs:int"/>
+
+                    <xs:element minOccurs="0" name="roomAvailableFrom" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="roomAvailableTo" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="cookingPossibilty" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="parkingAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="commonRoomsAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="gardenAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="fitnessAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="poolAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="publicTransportationAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="ambulantNursingServiceAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="emergencyCallInRoomAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="receptionManned" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="medicalAssistanceAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="homeHelpAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="counselingAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="loansAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="numberOfRoomsFrom" type="xs:decimal"/>
+
+                    <xs:element minOccurs="0" name="numberOfRoomsTo" type="xs:decimal"/>
+
+                    <xs:element minOccurs="0" name="barrierFree" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="numberOfLookedAfterApartments" type="xs:int"/>
+
+                    <xs:element minOccurs="0" name="numberOfNursingPlaces" type="xs:int"/>
+
+                    <xs:element minOccurs="0" name="livingSpaceFrom" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="livingSpaceTo" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="handicappedAccessible" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="guestApartmentsAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="restaurantAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="ownFurniturePossible" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="cleaningServiceAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="shoppingFacilitiesAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="security24Hours" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="culturalProgramAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="leisureActivitiesAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="religiousOfferingsAvailable" type="ns1:YesNotApplicableType"/>
+
+                    <xs:element minOccurs="0" name="balconyAvailable" type="ns1:BalconyAvailableType"/>
+
+                </xs:sequence>
+
+            </xs:extension>
+
+        </xs:complexContent>
+
+    </xs:complexType>
+
+</xs:schema>

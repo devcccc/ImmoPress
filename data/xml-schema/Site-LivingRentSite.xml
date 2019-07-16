@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.invalid/tns"
+           xmlns:gis="http://example.invalid/gis"
+           xmlns:ns1="http://example.invalid/ns1">
+
+    <xs:complexType name="LivingRentSite">
+
+        <xs:complexContent>
+
+            <xs:extension base="tns:RealEstate">
+
+                <xs:sequence>
+
+                    <!-- Basiselemente -->
+
+                    <xs:element minOccurs="0" name="externalId" type="xs:string"/>
+
+                    <xs:element name="title" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="creationDate" type="xs:dateTime"/>
+
+                    <xs:element minOccurs="0" name="lastModificationDate" type="xs:dateTime"/>
+
+                    <xs:element name="address" type="tns:Wgs84Address"/>
+
+                    <xs:element minOccurs="0" name="apiSearchData" type="tns:ApiSearchData"/>
+
+                    <xs:element minOccurs="0" name="groupNumber" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="descriptionNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="locationNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="otherNote" type="xs:string"/>
+
+                    <xs:element default="false" name="showAddress" type="xs:boolean"/>
+
+                    <!-- Immobilientyp spezifische Elemente -->
+
+                    <xs:element name="commercializationType" type="ns1:CommercializationType"/>
+
+                    <xs:element minOccurs="0" name="recommendedUseTypes" type="ns1:SiteRecommendedUseTypes"/>
+
+                    <xs:element minOccurs="0" name="tenancy" type="xs:int"/>
+
+                    <xs:element name="price" type="ns1:Price"/>
+
+                    <xs:element name="plotArea" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="minDivisible" type="xs:double"/>
+
+                    <xs:element name="courtage" type="ns1:CourtageInfo"/>
+
+                    <xs:element minOccurs="0" name="freeFrom" type="xs:string"/>
+
+                    <xs:element minOccurs="0" default="false" name="shortTermConstructible" type="xs:boolean"/>
+
+                    <xs:element minOccurs="0" default="false" name="buildingPermission" type="xs:boolean"/>
+
+                    <xs:element minOccurs="0" default="false" name="demolition" type="xs:boolean"/>
+
+                    <xs:element minOccurs="0" name="siteDevelopmentType" type="ns1:SiteDevelopmentType"/>
+
+                    <xs:element minOccurs="0" name="siteConstructibleType" type="ns1:SiteConstructibleType"/>
+
+                    <xs:element minOccurs="0" name="grz" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="gfz" type="xs:double"/>
+
+                    <xs:element minOccurs="0" name="leaseInterval" type="ns1:LeaseIntervalType"/>
+
+                </xs:sequence>
+
+            </xs:extension>
+
+        </xs:complexContent>
+
+    </xs:complexType>
+
+</xs:schema>

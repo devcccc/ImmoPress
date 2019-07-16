@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.invalid/tns"
+           xmlns:gis="http://example.invalid/gis"
+           xmlns:ns1="http://example.invalid/ns1">
+
+    <xs:complexType name="CompulsoryAuction">
+
+        <xs:complexContent>
+
+            <xs:extension base="tns:RealEstate">
+
+                <xs:sequence>
+
+                    <xs:element minOccurs="0" name="externalId" type="xs:string"/>
+
+                    <xs:element name="title" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="creationDate" type="xs:dateTime"/>
+
+                    <xs:element minOccurs="0" name="lastModificationDate" type="xs:dateTime"/>
+
+                    <xs:element name="address" type="tns:Wgs84Address"/>
+
+                    <xs:element minOccurs="0" name="apiSearchData" type="tns:ApiSearchData"/>
+
+                    <xs:element minOccurs="0" name="groupNumber" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="descriptionNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="furnishingNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="locationNote" type="xs:string"/>
+
+                    <xs:element minOccurs="0" name="otherNote" type="xs:string"/>
+
+                    <xs:element default="false" name="showAddress" type="xs:boolean"/>
+
+                    <xs:element name="marketValue" type="ns1:Price"/>
+
+                    <xs:element minOccurs="0" name="lowestBid" type="ns1:Price"/>
+
+                    <xs:element default="false" minOccurs="0" name="recurrenceAppointment" type="xs:boolean"/>
+
+                    <xs:element name="dateOfAuction" type="xs:date"/>
+
+                    <xs:element minOccurs="0" name="lastChangeDate" type="xs:date"/>
+
+                    <xs:element minOccurs="0" name="cancellationDate" type="xs:date"/>
+
+                    <xs:element name="recordationDate" type="xs:date"/>
+
+                    <xs:element name="area" type="xs:double"/>
+
+                    <xs:element name="auctionObjectType" type="ns1:CompulsoryAuctionType"/>
+
+                    <xs:element name="countyCourt" type="ns1:CountyCourt"/>
+
+                    <xs:element name="fileReferenceAtCountyCourt" type="xs:string"/>
+
+                    <xs:element name="numberOfFolio" type="xs:string"/>
+
+                    <xs:element default="false" minOccurs="0" name="splittingAuction" type="xs:boolean"/>
+
+                    <xs:element name="owner" type="xs:string"/>
+
+                </xs:sequence>
+
+            </xs:extension>
+
+        </xs:complexContent>
+
+    </xs:complexType>
+
+</xs:schema>
