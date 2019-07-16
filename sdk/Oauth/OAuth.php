@@ -4,7 +4,8 @@
 /* Generic exception class
  */
 if (!class_exists('OAuthException')) {
-  class OAuthException extends Exception {
+  class OAuthException extends Exception
+  {
     // pass
   }
 }
@@ -130,18 +131,21 @@ if (!class_exists('OAuthSignatureMethod')) {
  *   - Chapter 9.2 ("HMAC-SHA1")
  */
 if (!class_exists('OAuthSignatureMethod_HMAC_SHA1')) {
-  class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod {
-    function get_name() {
+  class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod
+  {
+    function get_name()
+    {
       return "HMAC-SHA1";
     }
 
-    public function build_signature($request, $consumer, $token) {
+    public function build_signature($request, $consumer, $token)
+    {
       $base_string = $request->get_signature_base_string();
       $request->base_string = $base_string;
 
       $key_parts = array(
-        $consumer->secret,
-        ($token) ? $token->secret : ""
+          $consumer->secret,
+          ($token) ? $token->secret : ""
       );
 
       $key_parts = OAuthUtil::urlencode_rfc3986($key_parts);
@@ -780,6 +784,7 @@ if (!class_exists('OAuthServer')) {
         throw new OAuthException("Nonce already used: $nonce");
       }
     }
+
   }
 }
 
@@ -813,7 +818,6 @@ if (!class_exists('OAuthDataStore')) {
       // is authorized
       // should also invalidate the request token
     }
-
   }
 }
 
@@ -834,8 +838,6 @@ if (!class_exists('OAuthUtil')) {
         return '';
       }
     }
-
-
 
 
     // This decode function isn't taking into consideration the above

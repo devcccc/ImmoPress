@@ -87,12 +87,12 @@ class Immocaster_Immobilienscout_Rest extends Immocaster_Immobilienscout
 	{
 		if($sUrl==false || $sUrl=='sandbox' || $sUrl=='test')
 		{
-			$this->_sUri = 'http://sandbox.immobilienscout24.de';
+			$this->_sUri = 'https://sandbox.immobilienscout24.de';
 			return true;
 		}
 		if($sUrl=='live')
 		{
-			$this->_sUri = 'http://rest.immobilienscout24.de';
+			$this->_sUri = 'https://rest.immobilienscout24.de';
 			return true;
 		}
 		$this->_sUri = $sUrl;
@@ -476,7 +476,7 @@ class Immocaster_Immobilienscout_Rest extends Immocaster_Immobilienscout
 	private function getApplicationTokenAndSecret() {
 		$oToken = NULL;
 		$sSecret = NULL;
-		if(class_exists('Immocaster_Data_Mysql') && $oData = Immocaster_Data_Mysql::getInstance()->getApplicationToken())
+		/*if(class_exists('Immocaster_Data_Mysql') && $oData = Immocaster_Data_Mysql::getInstance()->getApplicationToken())
 		{
 			$oToken = new OAuthToken
 			(
@@ -484,7 +484,7 @@ class Immocaster_Immobilienscout_Rest extends Immocaster_Immobilienscout
 				$oData->ic_secret
 			);
 			$sSecret = $oData->ic_secret;
-		}
+		}*/
 		return array($oToken, $sSecret);
 	}
 }
