@@ -1128,9 +1128,9 @@ class ImmoPress
     public function register_scripts_and_styles()
     {
         if (is_admin()) {
-            wp_register_script('immopress-admin-script', plugins_url( 'cccc_immopress//assets/js/admin.js' ), array('jquery'),'1.0', true);
+            wp_register_script('immopress-admin-script', plugins_url( 'assets/js/admin.js', dirname(__FILE__) ), array('jquery'),'1.0', true);
             wp_enqueue_script('immopress-admin-script');
-            wp_register_style( 'mmopress-admin-style', plugins_url( 'cccc_immopress//assets/css/admin.css' ) );
+            wp_register_style( 'mmopress-admin-style', plugins_url( 'assets/css/admin.css', dirname(__FILE__) ) );
             wp_enqueue_style( 'mmopress-admin-style' );
             wp_enqueue_script('jquery-ui-sortable');
             wp_enqueue_script('jquery-ui-tabs');
