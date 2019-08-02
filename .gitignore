@@ -22,9 +22,11 @@ mockup.png
 mockup.xml
 
 website.md
-/src
+
 *.sublime-project
 
 *.sublime-workspace
 
 sftp-config.json
+
+.idea
