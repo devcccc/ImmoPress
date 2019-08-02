@@ -24,6 +24,8 @@ Um das Plugin zu installieren gehen Sie wie folgt vor:
 4. Nach erfolgreicher Einrichtung des Plugins können Sie unter **Immobilien → Importieren** Objekt-IDs importieren
 5. Verwenden Sie `[immopress_fields groupid=XX]` im Editorfeld eines Immoblienobjekts, um seine hinterlegten Daten abzurufen. Wenn eine Adresse hinterlegt wurde zeigt `[immopress_map]` die Lage des Objekts in einer Google Map an.
 
+Detailierte Anleitung: https://www.cccc.de/arbeiten/grosses-update-fuer-immopress/
+
 ## Screenshots
 
 1. **Einrichten**: Über diese Eingabemaske können Sie Ihre Anwendung bei immoblienscout24.de authentifizieren lassen.
