@@ -732,7 +732,17 @@ class ImmoPress
     public function import_expose($exposeID)
     {
 
-        $exposeID = intval(($exposeID) ? $exposeID : $_POST['exposeID']);
+        if($exposeID) {
+            $exposeID = intval($exposeID);
+        } else {
+            if(isset($_POST['exposeID'])):
+                $exposeID = intval($_POST['exposeID']);
+            else :
+                $exposeID = 0;
+            endif;
+        }
+
+        //$exposeID = intval(($exposeID) ? $exposeID : $_POST['exposeID']);
 
         if (false === ($exposeID > 0)) {
             return false;
@@ -1084,7 +1094,7 @@ class ImmoPress
         if(array_key_exists('logo', $immopress_settings)) {
 
             if ($immopress_settings['logo'] == '1') {
-                $notice = '<p><img style="margin-right: 30px;" src="' . plugins_url('', dirname(__FILE__)) . '/assets/images/api-logo.png" alt="In Zusammenarbeit mit Immobilienscout24" />';
+                $notice = '<p><img style="margin-right: 30px;" src="' . plugins_url('', __DIR__) . '/assets/images/api-logo.png" alt="In Zusammenarbeit mit Immobilienscout24" />';
                 $notice .= '<a title="WordPress Integration und Import ImmoPress von 4c media" href="http://www.cccc.de/"><img src="' . $this->dir . '/assets/images/plugin-logo.png" alt="ImmoPress by 4c media" /></a></p>';
 
                 return $content . $notice;
